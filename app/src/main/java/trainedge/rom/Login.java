@@ -35,13 +35,13 @@ import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
-public class Login extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener, View.OnClickListener {
+public class Login extends AppCompatActivity /*implements GoogleApiClient.OnConnectionFailedListener, View.OnClickListener */{
 
-    public static final int RC_SIGN_IN=7283;
+    public static final int RC_SIGN_IN = 7283;
     public static final String TAG = "LoginActivity";
     private GoogleApiClient mGoogleApiClient;
     private FirebaseAuth mAuth;
-   private SignInButton btngoogle;
+    private SignInButton btngoogle;
     private FirebaseAuth.AuthStateListener mAuthListener;
     private LoginButton loginButton;
     private CallbackManager callbackManager;
@@ -52,7 +52,7 @@ public class Login extends AppCompatActivity implements GoogleApiClient.OnConnec
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-       btngoogle= (SignInButton) findViewById(R.id.btngoogle);
+      /* btngoogle= (SignInButton) findViewById(R.id.btngoogle);
         mAuth = FirebaseAuth.getInstance();
         // Configure Google Sign In
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -60,7 +60,7 @@ public class Login extends AppCompatActivity implements GoogleApiClient.OnConnec
                 .requestEmail()
                 .build();
         mGoogleApiClient = new GoogleApiClient.Builder(this)
-                .enableAutoManage(this /* FragmentActivity */, this /* OnConnectionFailedListener */)
+                .enableAutoManage(this *//* FragmentActivity *//*, this *//* OnConnectionFailedListener *//*)
                 .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
                 .build();
 
@@ -212,6 +212,7 @@ public class Login extends AppCompatActivity implements GoogleApiClient.OnConnec
                         // ...
                     }
                 });
-    }
+    }*/
 
+    }
 }
