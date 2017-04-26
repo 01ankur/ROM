@@ -46,12 +46,12 @@
         <Button
             android:id="@+id/button_login"
             style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="300dp"
+            android:layout_width="310dp"
             android:layout_height="wrap_content"
-            android:text="@string/login"
+            android:layout_alignEnd="@+id/btnGoogle"
             android:layout_alignParentTop="true"
             android:layout_alignRight="@+id/btnGoogle"
-            android:layout_alignEnd="@+id/btnGoogle" />
+            android:text="@string/login" />
 
         <Button
             android:id="@+id/button_register"
@@ -67,11 +67,11 @@
             android:layout_width="310dp"
 
             android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
             android:layout_below="@+id/textView3"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="18dp" />
+            android:layout_centerHorizontal="true" />
 
-        <com.facebook.login.widget.DeviceLoginButton
+        <com.facebook.login.widget.LoginButton
             android:id="@+id/btnFbLogin"
             android:layout_width="300dp"
             android:layout_height="match_parent"
