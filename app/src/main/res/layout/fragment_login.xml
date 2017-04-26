@@ -7,6 +7,20 @@
     android:orientation="vertical"
     android:padding="@dimen/padding_avg">
 
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login to Continue in ROM"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="64dp" />
+
     <EditText
         android:id="@+id/edit_text_email_id"
         android:layout_width="match_parent"
@@ -31,11 +45,13 @@
 
         <Button
             android:id="@+id/button_login"
-            style="?attr/borderlessButtonStyle"
-            android:layout_width="match_parent"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:text="@string/login" />
+            android:text="@string/login"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/btnGoogle"
+            android:layout_alignEnd="@+id/btnGoogle" />
 
         <Button
             android:id="@+id/button_register"
@@ -48,22 +64,20 @@
 
         <com.google.android.gms.common.SignInButton
             android:id="@+id/btnGoogle"
-            android:layout_width="wrap_content"
+            android:layout_width="310dp"
 
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_alignLeft="@+id/btnFbLogin"
-            android:layout_alignStart="@+id/btnFbLogin"
-            android:layout_alignRight="@+id/btnFbLogin"
-            android:layout_alignEnd="@+id/btnFbLogin" />
+            android:layout_below="@+id/textView3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp" />
 
-        <com.facebook.login.widget.LoginButton
+        <com.facebook.login.widget.DeviceLoginButton
             android:id="@+id/btnFbLogin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
             android:layout_below="@+id/btnGoogle"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="22dp" />
+            android:layout_marginTop="21dp" />
 
         <TextView
             android:id="@+id/textView3"
@@ -72,7 +86,9 @@
             android:layout_below="@+id/button_login"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="26dp"
-            android:text="OR" />
+            android:text="OR"
+            android:textAllCaps="true"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 
